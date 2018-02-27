@@ -60,7 +60,8 @@ input[type=button]:hover {
 }
 
           #bgcolor {
-background: radial-gradient(circle,#000066,black);}
+	background: black;
+}
 	#uberbar {
 		position: fixed;
 		background: white;
@@ -144,17 +145,17 @@ hr {
      <h3 style="font-style:oblique;font-size:100%;color:black;text-align:left;">
 <label for="toolmaterial">Tool Material</label>
 <pre><select id="toolmaterial" name="toolmaterial">
-      <option value="SELECT">Select</option>
+        <option value="" disabled selected>Select a material</option>
       <option value="HSS">HSS-High Speed Steel</option>
     </select><br></pre>
      <label for="wpmaterial">Workpiece Material</label>
      <pre> <select name="wpmaterial">
-      <option value="SELECT">Select</option>
+        <option value="" disabled selected>Select a material</option>
       <option value="Aluminium">Aluminium</option>
     </select><br></pre>
     <label for="depth">Depth Of Cut</label>
  <pre> <select name="depth">
-      <option value="SELECT">Select</option>
+        <option value="" disabled selected>Select a value</option>
       <option value="0.01">0.01</option>
       <option value="0.0545">0.0545</option>
       <option value="0.1405">0.1405</option>
@@ -164,7 +165,7 @@ hr {
     
  <label for="feed">Feed Rate</label>
     <pre> <select name="feed">
-      <option value="SELECT">Select</option>
+      <option value="" disabled selected>Select a value</option>
       <option value="0.0035">0.0035</option>
       <option value="0.01">0.01</option>
       <option value="0.0225">0.0225</option>
@@ -174,7 +175,7 @@ hr {
  
      <label for="speed">Cutting Speed</label>
 <pre> <select name="speed">
-      <option value="SELECT">Select</option>
+      <option value="" disabled selected>Select a value</option>
       <option value="425">425</option>
       <option value="287">287</option>
       <option value="187.5">187.5</option>
@@ -182,8 +183,10 @@ hr {
       <option value="75">75</option>
     </select>   rpm<br></pre>   
      <label for="volume">Volume Of Material to be Removed</label>
-     <pre><input type="text" name="volume">    cm^3<br></pre>
-     <center><input type="submit" value="Proceed">    <input type="button" value="Go back!" onclick="history.back()">
+     <pre><input type="text" name="volume" required>    inches^3<br></pre>
+     <label for="time">Machining Time</label>
+     <pre><input type="text" name="time">    minutes<br></pre>
+    <center><input type="submit" value="Proceed">    <input type="button" value="Go back!" onclick="history.back()">
 </center>
   </form>
 
