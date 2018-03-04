@@ -100,7 +100,7 @@ accoustics related to the machine<br></h3>
 		<hr>
                 <div class = "row text-center"><ul>
                         <li><a href="mrrinput.php"><h3 style="color:#000033;">Estimation of MRR and Toollife</h3></a></li>
-                        <li> <a href=""><h3 style="color:#000033;">Economics of Process</h3></a></li>
+                        <li> <a href="costdetail.php"><h3 style="color:#000033;">Economics of Process</h3></a></li>
                         <li> <a href=""><h3 style="color:#000033;">Acoustics Emission Analysis</h3></a></li>
                     </ul>
 			</div>
