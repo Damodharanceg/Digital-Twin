@@ -139,7 +139,10 @@ $volume=$_POST["volume"];
 $time=$_POST["time"];
 $mrr=$d*$f*$s;
  $mrr2=$mrr*16.387;
-    $t = $volume / $mrr;
+    $t = $volume / $mrr2;
+    $left=$toolcost+$wpcost;
+    $right=$t+$cost_per_comp;
+    
 ?>
 
 </head>
@@ -154,19 +157,12 @@ $mrr=$d*$f*$s;
     <br><br>
     	       	<div class = "container text-center" style = "background:white; color:white;border-radius:15px;padding-bottom:40px;">
 
- <h3 style="font-size:120%;color:black"><b>ESTIMATION RESULT FOR MRR AND TOOL LIFE<br></h3></b>
+ <h3 style="font-size:120%;color:black"><b>ESTIMATION OF ECONOMICS OF PROCESS<br></h3></b>
   <form NAME="mrr and tool life">
      <h3 style="font-style:oblique;font-size:100%;color:black;text-align:left;">
-         <label for="mrr">Metal Removal Rate</label>
- <pre><input type="text" name="mrr" value="<?php echo $mrr2;?>">    cm^3/minutes<br></pre>
- <label for="Tool_life">Time till tool failure or Tool life</label>
- <pre><input type="text" name="Tool_life" value="<?php echo $Toolwear1?>">    minutes<br></pre>
- <label for="time_replacement">Time Till Replacement (T*0.8)</label>
- <pre><input type="text" name="time_replacement" value="<?php echo $Toolwear1*0.8;?>">    minutes<br></pre>
- <label for="comp_per_time">Components Per Time</label>
- <pre><input type="text" name="comp_per_time" value="<?php echo $comp_er_time;?>">    minutes<br></pre>
-<label for="no_of_comp">No of Components for specific Time</label>
- <pre><input type="text" name="no_of_comp" value="<?php echo $n;?>">    cm^3/minutes<br></pre>
+         <label for="mrr">RESULT</label>
+ <pre><input type="text" name="mrr" value="<?php IF($left<$right){echo "The process is economical";}else{echo "The Process is Non-Economical";}?>"><br></pre>
+ 
  <center><input type="button" value="Go back!" onclick="history.back()"><br><br></form><form action="index.php"><input type="submit" value="Home"></form></center>
       </h3> </div>
  </html>
