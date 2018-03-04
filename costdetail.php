@@ -144,9 +144,9 @@ hr {
   <form action="economics.php" method="POST">
      <h3 style="font-style:oblique;font-size:100%;color:black;text-align:left;">
 <label for="toolcost">Tool Cost per piece</label>
-<pre>><input type="text" name="toolcost" required><br></pre>
+<pre><input type="text" name="toolcost" required><br></pre>
      <label for="wpcost">Workpiece Cost</label>
-     <pre>><input type="text" name="wpcost" required> <br></pre>
+     <pre><input type="text" name="wpcost" required> <br></pre>
      <label for="cost_per_component">Cost Per Component</label>
      <pre><input type="text" name="cost_per_component" required>    <br></pre>
      <label for="depth">Depth Of Cut</label>
